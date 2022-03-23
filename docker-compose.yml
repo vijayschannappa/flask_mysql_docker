@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    build: .
+    # links:
+    #   - "db:database"
+    ports:
+      - "6100:5000"
+  
+  db:
+    image: mysql:8.0.21
+    ports:
+      - "3000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /Users/vijaychannappa/Desktop/my_folder/my_learning/docker_learn/multi-docker-python-app-master/test_first/flask_mysql_app/:/docker-entrypoint-initdb.d:rw
+    
+
+
+
+
