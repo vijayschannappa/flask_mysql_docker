@@ -32,8 +32,8 @@ def fetch_users():
 
 @app.route('/ins_data/',methods=['GET'])
 def insert_users():
-    if 'ssid' in request.args:
-        name = str(request.args['ssid'])
+    if 'name' in request.args:
+        name = str(request.args['name'])
     if 'id' in request.args:
         id = int(request.args['id'])
     if 'ph' in request.args:
